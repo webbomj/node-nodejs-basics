@@ -11,11 +11,6 @@ const copy = async () => {
 
   try {
     await fs.access(filesFolder, fs.constants.R_OK);
-  } catch (e) {
-    throw newError;
-  }
-
-  try {
     await fs.mkdir(newFilesFolder);
   } catch (e) {
     throw newError;
