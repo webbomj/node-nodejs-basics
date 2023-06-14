@@ -6,7 +6,7 @@ const create = async () => {
   const filename = url.fileURLToPath(import.meta.url);
   const dirname = path.dirname(filename);
 
-  const newFileName = dirname + "\\files" + "\\fresh.txt";
+  const newFileName = path.join(dirname, "files", "fresh.txt");
 
   let hasFile = false;
   try {
